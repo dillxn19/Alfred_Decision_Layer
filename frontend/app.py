@@ -64,7 +64,7 @@ with col2:
         
         with st.spinner("Analyzing context..."):
             try:
-                response = requests.post("http://localhost:8000/evaluate", json=payload)
+                response = requests.post("https://alfred-backend-yr54.onrender.com", json=payload)
                 data = response.json()
                 
                 st.success(f"**Decision:** {data.get('decision')}")
